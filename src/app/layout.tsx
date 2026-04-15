@@ -15,9 +15,31 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SodiMedia — Web Development Portfolio",
+  title: {
+    default: "SodiMedia — Web Development Portfolio",
+    template: "%s — SodiMedia",
+  },
   description:
     "We build modern, high-performance websites and web applications. Explore our portfolio of web development projects.",
+  metadataBase: new URL("https://sodimedia.dev"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "SodiMedia",
+    title: "SodiMedia — Web Development Portfolio",
+    description:
+      "We build modern, high-performance websites and web applications.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SodiMedia — Web Development Portfolio",
+    description:
+      "We build modern, high-performance websites and web applications.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
